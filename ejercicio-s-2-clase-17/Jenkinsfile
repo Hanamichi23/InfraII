@@ -6,14 +6,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                dir ("maven-adderapp") {
+                dir ("ejercicio-s-2-clase-17/maven-adderapp") {
                     sh 'mvn -DskipTests clean package'
                 }
             }
         }
         stage('Test') {
             steps {
-                dir ('maven-adderapp') {
+                dir ('ejercicio-s-2-clase-17/maven-adderapp') {
                     sh "mvn test"
                     }
                 }
@@ -26,7 +26,7 @@ pipeline {
     }
     post {
         success {
-            dir ("maven-adderapp") {
+            dir ("ejercicio-s-2-clase-17/maven-adderapp") {
                 archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
             }
         }
