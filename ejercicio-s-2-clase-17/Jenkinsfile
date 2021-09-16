@@ -30,7 +30,7 @@ pipeline {
                 
                 sh "cp ejercicio-s-2-clase-17/maven-adderapp/$file ejercicio-s-2-clase-17/server/holamundo.jar"
                 
-                dir ('server') {
+                dir ('ejercicio-s-2-clase-17/server') {
                     sh """
                         docker rm -f server || true
                         docker build . -t server
