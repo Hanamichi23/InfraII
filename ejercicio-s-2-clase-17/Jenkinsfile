@@ -28,7 +28,7 @@ pipeline {
                     }
                 }
                 
-                sh "cp ejercicio-s-2-clase-17/maven-adderapp/$file server/holamundo.jar"
+                sh "cp ejercicio-s-2-clase-17/maven-adderapp/$file ejercicio-s-2-clase-17/server/holamundo.jar"
                 
                 dir ('server') {
                     sh """
